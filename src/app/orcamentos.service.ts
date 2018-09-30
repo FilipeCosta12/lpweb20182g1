@@ -31,6 +31,8 @@ export class OrcamentosService {
   salvar(orcamento) {
     orcamento.id = this.orcamentos.length + 1;
     this.orcamentos.push(orcamento);
+    console.log(this.orcamentos);
+    localStorage.setItem("orcamentos", JSON.stringify(this.orcamentos));
   }
   calcular(orcamento) {
     let somatorio = 0;
